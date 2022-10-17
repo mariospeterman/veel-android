@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.4.1'
+        // Uncomment below line to enable Sentry
+        // classpath 'io.sentry:sentry-android-gradle-plugin:1.7.36'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        //noinspection JcenterRepositoryObsolete
+        jcenter()
+        mavenCentral()
+        //maven { url 'https://adcolony.bintray.com/AdColony' }
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

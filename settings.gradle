@@ -1,0 +1,2 @@
+include ':app',':library'
+rootProject.name = 'NSFW 16 Oct 22'
